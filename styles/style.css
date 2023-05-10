@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+}
+
+body {
+  color: #04293A;
+}
+
+.backGradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #fdfbfb 0%, #ebedee 100%);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+aside {
+  padding: 2% 4%;
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 80%, rgba(238, 241, 245, 0) 100%);
+}
+
+.contacts {
+  font-size: 0.6rem;
+}
+
+main {
+  padding: 10vh;
+  width: 75%;
+  position: absolute;
+  right: 0;
+  min-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.bordersec {
+  height: 80vh;
+  margin: 10vh;
+  width: 100%;
+  scroll-snap-align: center;
+  padding: 0.25rem;
+  background-image: linear-gradient(45deg, #c471f5 0%, #fa71cd 100%);
+  border-radius: 1.25rem;
+  box-shadow: rgba(17, 12, 46, 0.3) 0px 48px 100px 0px;
+  transform: translateX(3rem);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.bordersec.active {
+  animation: slideIn 2s cubic-bezier(0.23, 1, 0.32, 1) 0s 1 forwards;
+}
+
+.mysec {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.sectiontext {
+  padding: 2rem;
+  margin: auto 0;
+  overflow-y: scroll;
+}
+
+.sectionimg {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+h1 {
+  color: #ECB365;
+  font-size: 1.8rem;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.point {
+  font-size: 1.2rem;
+  margin: 1vh;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.point.active {
+  transform: translateX(0px);
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+{
+    "sections":
+        [
+            {
+                "title": "Introduction",
+                "header": "Hello!<br>I am Chaian Par-ool",
+                "text": "a passionate Technical Generalist with +6 years of experience in Mechanical Design Engineering.<br><br>Width of my technical knowlendge and my drive to find solutions to technical dilemmas will become crucial for your team to achieve objectives.",
+                "img": "./resources/Photo1.jpg"
+            },
+            {
+                "title": "General Story",
+                "header": "Engineer",
+                "text": "Even before I graduated from Peter The Great Polytechnical University with Bachelor's degree in Robotics, I sought an opportunity to build up my engineering skills by joining my faculty's Robotics Lab.<br><br>Consequent employments lead me through positions of:<br>  - mechanical design developer,<br>  - small team leader (4 pers.),<br>  - project launch support (+4000 parts)<br>and various maintenance and service roles.",
+                "img": "./resources/Photo2-1.jpg"
+            },
+            {
+                "title": "Shift in Career",
+                "header": "Engineer..?",
+                "text": "Overtime it became more apparent to me that I can grow beyond what I already knew. Also, the unforeseen circumstances today are moving me to look for new opportunities and to change my understanding of self and and my role in productive processes.<br><br>I believe that I can widen a teams' qualifications thanks to my ability to look beyond divisions of technical fields.",
+                "img": "./resources/Photo2-1.jpg"
+            },
+            {
+                "title": "Backend technologies",
+                "header": "Python",
+                "text": "Python 3, SQL, PostgreSQL, SQLite",
+                "img": "./resources/Photo2.jpg"
+            },
+            {
+                "title": "Frontend technologies",
+                "header": "Need a page? Got it!",
+                "text": "HTML, CSS, SASS, JavaScript",
+                "img": "./resources/Photo2.jpg"
+            },
+            {
+                "title": "Technologies",
+                "header": "Tools For You",
+                "text": "Python 3, SQL, PostgreSQL, SQLite, HTML, CSS, SASS, JavaScript",
+                "img": "./resources/Photo2.jpg"
+            }
+        ]
+}

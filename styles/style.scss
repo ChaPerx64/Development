@@ -1,0 +1,148 @@
+// Declarating style variables
+
+// Fonts
+$mainfont: 'Jost', sans-serif;
+$biggestsize: 1.8rem;
+$biggersize: 1.2rem;
+$mainsize: 22px;
+$smallsize: 0.6rem;
+
+// Colors
+$font-color-primary: #04293A;
+$color-accent: #ECB365;
+$background-gradient: linear-gradient(45deg, #fdfbfb 0%, #ebedee 100%);
+
+// Dimensions
+$card-v-dimension: 80vh;
+$card-between-spacing: calc((100vh - $card-v-dimension) / 2);
+$card-corner-innerradius: 1rem;
+$card-border-thickness: 0.25rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $mainfont;
+  font-size: $mainsize;
+}
+
+body {
+  color: $font-color-primary;
+}
+
+.backGradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $background-gradient;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+aside {
+  padding: 2% 4%;
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 80%, rgba(238, 241, 245, 0) 100%);
+}
+
+.contacts {
+  font-size: $smallsize;
+  // text-align: center;
+}
+
+// .contents {
+//   margin: auto;
+// }
+
+main {
+  padding: $card-between-spacing;
+  width: 75%;
+  position: absolute;
+  right: 0;
+  min-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh
+}
+
+.bordersec {
+  height: $card-v-dimension;
+  margin: $card-between-spacing;
+  width: 100%;
+  scroll-snap-align: center;
+  padding: $card-border-thickness;
+  background-image: linear-gradient(45deg, #c471f5 0%, #fa71cd 100%);
+  border-radius: $card-corner-innerradius + $card-border-thickness;
+  box-shadow: rgba(17, 12, 46, 0.3) 0px 48px 100px 0px;
+  transform: translateX(3rem);
+  opacity: 0;
+  will-change: transform, opacity;
+  
+  &.active {
+    animation: slideIn 2s cubic-bezier(0.23, 1, 0.320, 1) 0s 1 forwards;
+  }
+}
+
+.mysec {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: $card-corner-innerradius;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.sectiontext {
+  padding: 2rem;
+  margin: auto 0;
+  overflow-y: scroll;
+}
+
+.sectionimg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+h1 {
+  color: $color-accent;
+  font-size: $biggestsize;
+}
+
+@keyframes slideIn {
+  // 0% {
+  //     transform: translateX(3rem);
+  //     opacity: 0;
+  // }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.point {
+  font-size: $biggersize;
+  margin: 1vh;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: translateX(-200px);
+  opacity: 0;
+
+  &.active {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
