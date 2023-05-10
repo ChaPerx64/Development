@@ -16,8 +16,8 @@
             {
                 "title": "Shift in Career",
                 "header": "Engineer..?",
-                "text": "Overtime it became more apparent to me that I can grow beyond what I already knew. Also, the unforeseen circumstances today are moving me to look for new opportunities and to change my understanding of self and and my role in productive processes.<br><br>I believe that I can widen a teams' qualifications thanks to my ability to look beyond divisions of technical fields.",
-                "img": "./resources/Photo2-1.jpg"
+                "text": "Overtime it became more apparent to me that I can grow beyond what I already knew. Also, the unforeseen circumstances of today are moving me to look for new opportunities and to change my understanding of self and and my role in productive processes.<br><br>I believe that I can widen a teams' qualifications thanks to my ability to look beyond divisions of technical fields.",
+                "img": "./resources/Photo3.jpg"
             },
             {
                 "title": "Backend technologies",
@@ -29,19 +29,19 @@
                 "title": "Frontend technologies",
                 "header": "More Software Engineering",
                 "text": "In more recent time, I've directed my attention to web-technologies and tools that really propagate IT products to the end users: <br>- HTML<br>- CSS<br>- SASS<br>- JavaScript<br><br>This page is written completely by me.",
-                "img": "./resources/Photo2.jpg"
+                "img": "./resources/Photo4.jpg"
             },
             {
                 "title": "Other Skills",
-                "header": "Tools For Me :)",
-                "text": "I speak C1-ish English,<br>was a conductor in 30-person-sized non-professional choir,<br>glad to hear other people's stories<br>and maybe have some of my own,<br>rigorous non-drinker and frivolous meat-eater,<br>make new friends with ease",
-                "img": "./resources/Photo2.jpg"
+                "header": "Tools For Life",
+                "text": "- I speak C1-ish English<br>- can conduct in 30-person-sized non-professional choir and write music for it<br>- glad to hear other people's stories and maybe have some of my own<br>- rigorous non-drinker and frivolous meat-eater<br>- become a team member with ease",
+                "img": "./resources/Photo5.jpg"
             },
             {
                 "title": "Contact information",
-                "header": "Call me maybe ;)",
+                "header": "Call Me Maybe ;)",
                 "text": "My mobile phone with all possible social media linked to it (Telegram is primary, WhatsApp, Viber):<br>+381-62-932-70-32<br>e-mail: chayan.par@gmail.com",
-                "img": "./resources/Photo2.jpg"
+                "img": "./resources/Photo6.jpg"
             }
         ]
 }

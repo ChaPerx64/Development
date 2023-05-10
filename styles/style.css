@@ -82,6 +82,7 @@ main {
   padding: 2rem;
   margin: auto 0;
   overflow-y: scroll;
+  text-align: justify;
 }
 
 .sectionimg {
