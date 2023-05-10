@@ -21,20 +21,26 @@
             },
             {
                 "title": "Backend technologies",
-                "header": "Python",
-                "text": "Python 3, SQL, PostgreSQL, SQLite",
+                "header": "Software Engineer!",
+                "text": "So for the last three years (if one doesn't count time in the university) I've been building up knowledge of OOP and Python.<br><br>I had built a couple of utilities for myself (like PyModoro and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production).<br><br>Tools that I used to achieve my goals were:<br>Python3, Git, PySimpleGUI, Python-Telegram-Bot library, PostgreSQL, SQLite",
                 "img": "./resources/Photo2.jpg"
             },
             {
                 "title": "Frontend technologies",
-                "header": "Need a page? Got it!",
-                "text": "HTML, CSS, SASS, JavaScript",
+                "header": "More Software Engineering",
+                "text": "In more recent time, I've directed my attention to web-technologies and tools that really propagate IT products to the end users: <br>- HTML<br>- CSS<br>- SASS<br>- JavaScript<br><br>This page is written completely by me.",
                 "img": "./resources/Photo2.jpg"
             },
             {
-                "title": "Technologies",
-                "header": "Tools For You",
-                "text": "Python 3, SQL, PostgreSQL, SQLite, HTML, CSS, SASS, JavaScript",
+                "title": "Other Skills",
+                "header": "Tools For Me :)",
+                "text": "I speak C1-ish English,<br>was a conductor in 30-person-sized non-professional choir,<br>glad to hear other people's stories<br>and maybe have some of my own,<br>rigorous non-drinker and frivolous meat-eater,<br>make new friends with ease",
+                "img": "./resources/Photo2.jpg"
+            },
+            {
+                "title": "Contact information",
+                "header": "Call me maybe ;)",
+                "text": "My mobile phone with all possible social media linked to it (Telegram is primary, WhatsApp, Viber):<br>+381-62-932-70-32<br>e-mail: chayan.par@gmail.com",
                 "img": "./resources/Photo2.jpg"
             }
         ]

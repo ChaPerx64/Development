@@ -56,9 +56,9 @@ main {
   margin: 10vh;
   width: 100%;
   scroll-snap-align: center;
-  padding: 0.25rem;
+  padding: 0.2rem;
   background-image: linear-gradient(45deg, #c471f5 0%, #fa71cd 100%);
-  border-radius: 1.25rem;
+  border-radius: 1.2rem;
   box-shadow: rgba(17, 12, 46, 0.3) 0px 48px 100px 0px;
   transform: translateX(3rem);
   opacity: 0;
