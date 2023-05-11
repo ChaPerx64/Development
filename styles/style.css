@@ -3,11 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jost", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 body {
-  color: #04293A;
+  color: rgb(4, 41, 58);
 }
 
 .backGradient {
@@ -25,6 +25,7 @@ aside {
   width: 25%;
   height: 100vh;
   position: fixed;
+  z-index: -1;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -34,6 +35,9 @@ aside {
 }
 
 .contacts {
+  font-size: 0.6rem;
+}
+.contacts a {
   font-size: 0.6rem;
 }
 
@@ -46,7 +50,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
 }
@@ -84,6 +87,12 @@ main {
   overflow-y: scroll;
   text-align: justify;
 }
+.sectiontext mark {
+  background: linear-gradient(45deg, #c471f5 0%, #fa71cd 100%);
+}
+.sectiontext ul {
+  margin-left: 2rem;
+}
 
 .sectionimg {
   height: 100%;
@@ -99,6 +108,11 @@ h1 {
   font-size: 1.8rem;
 }
 
+h2 {
+  color: #ECB365;
+  font-size: 1.2rem;
+}
+
 @keyframes slideIn {
   to {
     transform: translateX(0);
@@ -108,11 +122,18 @@ h1 {
 .point {
   font-size: 1.2rem;
   margin: 1vh;
-  transition: transform 0.5s, opacity 0.5s;
+  transition-property: transform, opacity, color;
+  transition-duration: 0.5s;
   transform: translateX(-200px);
   opacity: 0;
+  color: rgba(4, 41, 58, 0.5);
+  cursor: pointer;
 }
-.point.active {
+.point.shown {
   transform: translateX(0px);
   opacity: 1;
+}
+.point.shown.inView {
+  transform: scale(1.05);
+  color: rgb(4, 41, 58);
 }/*# sourceMappingURL=style.css.map */

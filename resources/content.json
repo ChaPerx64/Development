@@ -3,14 +3,14 @@
         [
             {
                 "title": "Introduction",
-                "header": "Hello!<br>I am Chaian Par-ool",
+                "header": "Hello!<br>I am Chaian Par-ool,",
                 "text": "a passionate Technical Generalist with +6 years of experience in Mechanical Design Engineering.<br><br>Width of my technical knowlendge and my drive to find solutions to technical dilemmas will become crucial for your team to achieve objectives.",
                 "img": "./resources/Photo1.jpg"
             },
             {
                 "title": "General Story",
                 "header": "Engineer",
-                "text": "Even before I graduated from Peter The Great Polytechnical University with Bachelor's degree in Robotics, I sought an opportunity to build up my engineering skills by joining my faculty's Robotics Lab.<br><br>Consequent employments lead me through positions of:<br>  - mechanical design developer,<br>  - small team leader (4 pers.),<br>  - project launch support (+4000 parts)<br>and various maintenance and service roles.",
+                "text": "Even before I graduated from Peter The Great Polytechnical University with Bachelor's degree in Robotics, I sought an opportunity to build up my engineering skills by joining my faculty's Robotics Lab.<br><br>Consequent employments lead me through positions of:<ul><li>mechanical design developer</li><li>small team leader (4 pers.)</li><li>project launch support (+4000 parts)</li><li>and various maintenance and service roles</li></ul>",
                 "img": "./resources/Photo2-1.jpg"
             },
             {
@@ -22,25 +22,25 @@
             {
                 "title": "Backend technologies",
                 "header": "Software Engineer!",
-                "text": "So for the last three years (if one doesn't count time in the university) I've been building up knowledge of OOP and Python.<br><br>I had built a couple of utilities for myself (like PyModoro and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production).<br><br>Tools that I used to achieve my goals were:<br>Python3, Git, PySimpleGUI, Python-Telegram-Bot library, PostgreSQL, SQLite",
+                "text": "So for the last three years (if one doesn't count time in the university) I've been building up knowledge of OOP and Python.<br><br>I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS.<br><br><h2>Tools that I used to achieve my goals were:</h2><br>Python3, Git, PySimpleGUI, Python-Telegram-Bot library, PostgreSQL, SQLite",
                 "img": "./resources/Photo2.jpg"
             },
             {
                 "title": "Frontend technologies",
                 "header": "More Software Engineering",
-                "text": "In more recent time, I've directed my attention to web-technologies and tools that really propagate IT products to the end users: <br>- HTML<br>- CSS<br>- SASS<br>- JavaScript<br><br>This page is written completely by me.",
+                "text": "In more recent time, I've directed my attention to web-technologies and tools that really propagate IT products to the end users: <ul><li>HTML</li><li>CSS</li><li>SASS</li><li>JavaScript</li></ul><br>P.S. The code for this page is written completely by me.",
                 "img": "./resources/Photo4.jpg"
             },
             {
                 "title": "Other Skills",
-                "header": "Tools For Life",
-                "text": "- I speak C1-ish English<br>- can conduct in 30-person-sized non-professional choir and write music for it<br>- glad to hear other people's stories and maybe have some of my own<br>- rigorous non-drinker and frivolous meat-eater<br>- become a team member with ease",
+                "header": "I also am:",
+                "text": "<ul><li>A C1-ish-level English speaker</li><li>Can conduct in 30-person-sized non-professional choir and write music for it</li><li>always glad to hear other people's stories and maybe have some of my own</li><li>a rigorous non-drinker and a frivolous meat-eater</li><li>easily integrate into teams I am introduced to</li></ul>",
                 "img": "./resources/Photo5.jpg"
             },
             {
                 "title": "Contact information",
                 "header": "Call Me Maybe ;)",
-                "text": "My mobile phone with all possible social media linked to it (Telegram is primary, WhatsApp, Viber):<br>+381-62-932-70-32<br>e-mail: chayan.par@gmail.com",
+                "text": "My mobile phone with all possible social media linked to it (<a href='https://t.me/ChePar' target='_blank'>Telegram</a> is primary, WhatsApp, Viber):<br>+381-62-932-70-32<br>e-mail: <a href='mailto:chayan.par@gmail.com'>chayan.par@gmail.com</a>",
                 "img": "./resources/Photo6.jpg"
             }
         ]

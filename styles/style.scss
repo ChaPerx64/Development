@@ -4,13 +4,15 @@
 $mainfont: 'Jost', sans-serif;
 $biggestsize: 1.8rem;
 $biggersize: 1.2rem;
-$mainsize: 22px;
+$mainsize: 20px;
 $smallsize: 0.6rem;
 
 // Colors
-$font-color-primary: #04293A;
+$font-color-primary: rgba(4, 41, 58, 1);
+$font-color-diminished: rgba(4, 41, 58, 0.5);
 $color-accent: #ECB365;
 $background-gradient: linear-gradient(45deg, #fdfbfb 0%, #ebedee 100%);
+$highlight-gradient: linear-gradient(45deg, #c471f5 0%, #fa71cd 100%);
 
 // Dimensions
 $card-v-dimension: 80vh;
@@ -45,6 +47,7 @@ aside {
   width: 25%;
   height: 100vh;
   position: fixed;
+  z-index: -1;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -56,6 +59,10 @@ aside {
 .contacts {
   font-size: $smallsize;
   // text-align: center;
+
+  a {
+    font-size: $smallsize;
+  }
 }
 
 // .contents {
@@ -71,7 +78,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh
 }
@@ -82,7 +89,7 @@ main {
   width: 100%;
   scroll-snap-align: center;
   padding: $card-border-thickness;
-  background-image: linear-gradient(45deg, #c471f5 0%, #fa71cd 100%);
+  background-image: $highlight-gradient;
   border-radius: $card-corner-innerradius + $card-border-thickness;
   box-shadow: rgba(17, 12, 46, 0.3) 0px 48px 100px 0px;
   transform: translateX(3rem);
@@ -109,6 +116,14 @@ main {
   margin: auto 0;
   overflow-y: scroll;
   text-align: justify;
+
+  mark {
+    background: $highlight-gradient;
+  }
+
+  ul {
+    margin-left: 2rem;
+  }
 }
 
 .sectionimg {
@@ -123,6 +138,11 @@ h1 {
   font-size: $biggestsize;
 }
 
+h2 {
+  color: $color-accent;
+  font-size: $biggersize;
+}
+
 @keyframes slideIn {
   // 0% {
   //     transform: translateX(3rem);
@@ -134,16 +154,31 @@ h1 {
   }
 }
 
+// .ponts {
+//   margin: 1vh;
+//   display: flex;
+//   flex-direction: column;
+// }
+
 .point {
   font-size: $biggersize;
   margin: 1vh;
-  transition: transform 0.5s, opacity 0.5s;
+  // transition: transform 0.5s, opacity 0.5s, color 0.5;
+  transition-property: transform, opacity, color;
+  transition-duration: 0.5s;
   transform: translateX(-200px);
   opacity: 0;
+  color: $font-color-diminished;
+  cursor: pointer;
 
-  &.active {
+  &.shown {
     transform: translateX(0px);
     opacity: 1;
+
+    &.inView {
+      transform: scale(1.05);
+      color: $font-color-primary;
+    }
   }
 }
 

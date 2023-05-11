@@ -57,8 +57,9 @@ function insertSection (Data) {
     //   </div>
     // </div>`
     const pp = document.createElement("div");
-    pp.classList.add('point')
+    pp.className = 'point'
     pp.id = `point${i}`
+    pp.onclick = () => bordersec.scrollIntoView({behavior: "smooth", block: "center"})
     pp.appendChild(document.createTextNode(`${Data.sections[i].title}`));
     points.appendChild(pp);
   }
