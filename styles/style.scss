@@ -1,10 +1,21 @@
 // Declarating style variables
 
+//Bootstrap Breakpoints
+  // xs: 0,
+  // sm: 576px,
+  // md: 768px,
+  // lg: 992px,
+  // xl: 1200px,
+  // xxl: 1400px
+$breakpoint-lg: 1200px;
+$breakpoint-sm: 768px;
+
 // Fonts
 $mainfont: 'Jost', sans-serif;
 $biggestsize: 1.8rem;
 $biggersize: 1.2rem;
 $mainsize: 20px;
+$mobilesize: 16px;
 $smallsize: 0.6rem;
 
 // Colors
@@ -15,8 +26,12 @@ $background-gradient: linear-gradient(45deg, #fdfbfb 0%, #ebedee 100%);
 $highlight-gradient: linear-gradient(45deg, #c471f5 0%, #fa71cd 100%);
 
 // Dimensions
-$card-v-dimension: 80vh;
+$card-v-dimension: 75vh;
 $card-between-spacing: calc((100vh - $card-v-dimension) / 2);
+$card-v-dimension-bigger: 90vh;
+$card-between-spacing-bigger: calc((100vh - $card-v-dimension-bigger) / 2);
+$card-v-dimension-mobile: 95vh;
+$card-between-spacing-mobile: calc((100vh - $card-v-dimension-mobile) / 2);
 $card-corner-innerradius: 1rem;
 $card-border-thickness: 0.2rem;
 
@@ -25,7 +40,12 @@ $card-border-thickness: 0.2rem;
   padding: 0;
   box-sizing: border-box;
   font-family: $mainfont;
-  font-size: $mainsize;
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: $mainsize;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $mobilesize;
+  }
 }
 
 body {
@@ -44,57 +64,98 @@ body {
 
 aside {
   padding: 2% 4%;
-  width: 25%;
-  height: 100vh;
   position: fixed;
-  z-index: -1;
   left: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 80%, rgba(238, 241, 245, 0) 100%);
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: $biggersize;
+
+    z-index: -1;
+    width: 25%;
+    height: 100vh;
+    align-items: flex-start;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 80%, rgba(238, 241, 245, 0) 100%);
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    // position: sticky;
+    z-index: 10;
+    top: -100vh;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    background-color: #ffffff;
+    // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 80%, rgba(238, 241, 245, 0) 100%);
+  }
 }
 
 .contacts {
   font-size: $smallsize;
-  // text-align: center;
-
   a {
     font-size: $smallsize;
   }
+  @media screen and (max-width: $breakpoint-sm) {
+    visibility: hidden;
+  }
 }
 
-// .contents {
-//   margin: auto;
-// }
+@media screen and (max-width: $breakpoint-sm) {
+  .contents {
+    visibility: hidden;
+  }
+}
+
 
 main {
-  padding: $card-between-spacing;
-  width: 75%;
   position: absolute;
   right: 0;
-  min-width: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: right;
   // scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh
+  @media screen and (min-width: $breakpoint-lg) {
+    padding: 0 $card-between-spacing;
+    width: 75%;
+    height: 100vh;
+  }
+  @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+    padding: 0 $card-between-spacing-bigger;
+    width: 75%;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    padding: 0 $card-between-spacing-mobile;
+    width: 100%;
+  }
 }
 
 .bordersec {
-  height: $card-v-dimension;
-  margin: $card-between-spacing;
   width: 100%;
-  scroll-snap-align: center;
+  flex-shrink: 0;
+  // scroll-snap-align: center;
   padding: $card-border-thickness;
   background-image: $highlight-gradient;
   border-radius: $card-corner-innerradius + $card-border-thickness;
   box-shadow: rgba(17, 12, 46, 0.3) 0px 48px 100px 0px;
-  transform: translateX(3rem);
-  opacity: 0;
   will-change: transform, opacity;
+  @media screen and (min-width: $breakpoint-lg) {
+    min-height: $card-v-dimension;
+    margin: $card-between-spacing;
+    transform: translateX(3rem);
+    opacity: 0;
+  }
+  @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+    height: $card-v-dimension-bigger;
+    margin: $card-between-spacing-bigger;
+    transform: translateX(3rem);
+    opacity: 0;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    height: $card-v-dimension-mobile;
+    margin: $card-between-spacing-mobile;
+  }
   
   &.active {
     animation: slideIn 2s cubic-bezier(0.23, 1, 0.320, 1) 0s 1 forwards;
@@ -104,18 +165,31 @@ main {
 .mysec {
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
   border-radius: $card-corner-innerradius;
   overflow: hidden;
   background-color: #ffffff;
+  @media screen and (min-width: $breakpoint-lg) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  @media screen and (max-width: $breakpoint-lg) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .sectiontext {
   padding: 2rem;
   margin: auto 0;
-  overflow-y: scroll;
   text-align: justify;
+  @media screen and (min-width: $breakpoint-lg) {
+    flex-basis: 50px;
+    flex-grow: 1;
+  }
+  @media screen and (max-width: $breakpoint-lg) {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 
   mark {
     background: $highlight-gradient;
@@ -124,6 +198,10 @@ main {
   ul {
     margin-left: 2rem;
   }
+
+  .h1 .h2 {
+    text-align: left;
+  }
 }
 
 .sectionimg {
@@ -131,6 +209,7 @@ main {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  // flex-shrink: 10;
 }
 
 h1 {
@@ -144,10 +223,6 @@ h2 {
 }
 
 @keyframes slideIn {
-  // 0% {
-  //     transform: translateX(3rem);
-  //     opacity: 0;
-  // }
   to {
       transform: translateX(0);
       opacity: 1;
@@ -161,7 +236,6 @@ h2 {
 // }
 
 .point {
-  font-size: $biggersize;
   margin: 1vh;
   // transition: transform 0.5s, opacity 0.5s, color 0.5;
   transition-property: transform, opacity, color;

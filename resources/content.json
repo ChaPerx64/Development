@@ -3,7 +3,7 @@
         [
             {
                 "title": "Introduction",
-                "header": "Hello!<br>I am Chaian Par-ool,",
+                "header": "Hello! <wbr>I&nbsp;am&nbsp;Chaian <wbr>Par&#8209;ool,",
                 "text": "a passionate Technical Generalist with +6 years of experience in Mechanical Design Engineering.<br><br>Width of my technical knowlendge and my drive to find solutions to technical dilemmas will become crucial for your team to achieve objectives.",
                 "img": "./resources/Photo1.jpg"
             },

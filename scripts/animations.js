@@ -1,20 +1,19 @@
 
-const t_start = 2000 //ms
-ppid = 0
-incr = 100
 
-function trigger_points () {
+function triggerPointAppearance () {
   const points = document.querySelectorAll('.point')
+  const increment = 100
+  let pointStart = 0
   els = Array.from(points);
-  for (i = 0; i < els.length; i++) {
+  els.forEach((el) => {
     setTimeout(() => {
-      document.getElementById(`point${ppid}`).classList.add('shown')
-      ppid++
-    }, i*incr)
-  }
+      el.classList.add('shown')
+    }, pointStart)
+    pointStart += increment
+  })
 }
 
-function animate_sec () {
+function initializeSectionAnimations () {
   const sections = document.querySelectorAll('.bordersec')
   els = Array.from(sections)
   for (i = 0; i < els.length; i++) {
@@ -24,38 +23,24 @@ function animate_sec () {
 
 
 function addObserver(el, options){
-  if(!('IntersectionObserver' in window)){
-    if(options.cb){
-      options.cb(el)
-    }else{
-      entry.target.classList.add('active')
-    }
-    return
-  }
-  let observer = new IntersectionObserver((entries, observer) => { //this takes a callback function which receives two arguments: the elemts list and the observer instance
-    // for (i = 0; i < entries.length; i++) {
+  let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      const pp = document.getElementById(`point${options.pointerid}`)
+      const associatedPoint = document.getElementById(`point${options.pointerid}`)
       if(entry.isIntersecting){
         if(options.cb){
           options.cb(el)
         }else{
           entry.target.classList.add('active')
-          pp.classList.add('inView')
+          associatedPoint.classList.add('inView')
         }
-        // observer.unobserve(entry.target)
       } else {
-        if (pp.classList.contains('inView')) {pp.classList.remove('inView')}
+        associatedPoint.classList.remove('inView')
       }
     })
-    // entries.forEach(entry => {
-
-    // })
   }, options)
   observer.observe(el)
 }
 
 
-setTimeout(() => trigger_points(), t_start)
-setTimeout(() => animate_sec(), t_start)
+
 
