@@ -22,8 +22,14 @@
             {
                 "title": "Backend technologies",
                 "header": "Software Engineer!",
-                "text": "So for the last three years (if one doesn't count time in the university) I've been building up knowledge of OOP and Python.<br><br>I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS.<br><br><h2>Tools that I used to achieve my goals were:</h2><br>Python3, Git, PySimpleGUI, Python-Telegram-Bot library, PostgreSQL, SQLite",
+                "text": "So for the last three years (if one doesn't count time in the university) I've been building up knowledge of OOP and Python.<br><br>I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS.<br><br><h2>Tools that I used to achieve my goals were:</h2><br>Python3, Git, Django, PySimpleGUI, Python-Telegram-Bot library, PostgreSQL, SQLite",
                 "img": "./resources/Photo2.jpg"
+            },
+            {
+                "title": "Django",
+                "header": "Chormeister!",
+                "text": "My latest achievement on this backend-developer path is <a href='https://chormeister.webtm.ru/'>Chormeister</a>. A website to help musical collectives organize their activities.<br>Built completely by me with use of Django framework and SQLite.<br>You can register on it now, or contact me, and I will give you access to the test piece of it.",
+                "img": "./resources/Photo8.png"
             },
             {
                 "title": "Frontend technologies",
