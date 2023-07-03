@@ -10,10 +10,13 @@ function createSection (section, id) {
         </h1>
         ${section.text}
       </div>
-      <img class="sectionimg" src="${section.img}" alt="SectionPicture">
+      <div style="background-image: url(${section.img});" class="sectionimg">
+        
+      </div>
     </div>`
   return borderSec
 }
+// <img class="sectionimg" src="${section.img}" alt="SectionPicture">
 
 function mountSections (sections) {
   const mainBody = document.querySelector('main')

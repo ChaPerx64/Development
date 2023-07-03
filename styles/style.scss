@@ -212,9 +212,8 @@ main {
 .sectionimg {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
-  // flex-shrink: 10;
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {

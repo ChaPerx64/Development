@@ -194,10 +194,8 @@ main {
 .sectionimg {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
