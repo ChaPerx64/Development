@@ -1,4 +1,4 @@
-const t_start = 2000 //ms
+const t_start = 1000 //ms
 
 loadJSON('./resources/content.json')
   .then((data) => {
