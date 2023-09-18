@@ -22,7 +22,7 @@
             {
                 "title": "Django project",
                 "header": "Chormeister",
-                "text": "My latest achievement on the backend-developer path is <a href='https://chormeister.webtm.ru/'>Chormeister</a>, a website designed to assist musical collectives in organizing their activities. You can now register on the platform, or contact me directly, and I will give you access to the test piece of it.<br><br>Chormeister was entirely developed by me using Django framework and SQLite as the underlying technologies. Here's <a href='https://github.com/ChaPerx64/Chormeister_Django'>the GitHub repo</a>.",
+                "text": "My latest achievement on the backend-developer path is <a href='https://chormeisters.com/'>Chormeisters.com</a>, a website designed to assist musical collectives in organizing their activities. You can now register on the platform, or contact me directly, and I will give you access to the test piece of it.<br><br>Chormeister was entirely developed by me using Django framework and SQLite as the underlying technologies. Here's <a href='https://github.com/ChaPerx64/Chormeister_Django'>the GitHub repo</a>.",
                 "img": "./resources/Photo8.png"
             },
             {
