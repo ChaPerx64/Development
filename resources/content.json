@@ -1,59 +1,192 @@
 {
-    "sections":
-        [
-            {
-                "title": "Introduction",
-                "header": "Hello! <wbr>I&nbsp;am&nbsp;Chaian <wbr>Par&#8209;ool,",
-                "text": "a highly motivated Backend Engineer with a strong foundation in Robotics Engineering and a passion for developing software solutions.<br><br>Possessing a solid foundation in engineering principles, analytical thinking, and problem-solving, I am eager to leverage my technical skills and adaptability to contribute to the development and optimization of software applications. With my drive for continuous learning, I am determined to excel in the realm of back-end engineering.",
-                "img": "./resources/Photo1.jpg"
-            },
-            {
-                "title": "My Stack",
-                "header": "Mastered Technologies",
-                "text": "Below is a list of some tools that I can confidently use:<br><br><h2>Backend tools:</h2>Python3, Git, Django, Django REST framework, PySimpleGUI, Python-Telegram-Bot library, PostgreSQL, SQLite<br><br><h2>Frontend tools:</h2>HTML, CSS, SASS, JavaScript<br><br><h2>DevOps skills:</h2>Bash scripting, GitHub Actions, light server maintenance (can also setup a web-server using NGINX and gunicorn)<br><br><h2>Other:</h2>Some time ago used to program PLCs using C, FBD and Ladder Diagram",
-                "img": "./resources/Photo2_2.jpg"
-            },
-            {
-                "title": "Soft Skills",
-                "header": "Soft Skills",
-                "text": "<p>Throughout my illustrious professional trajectory, I have acquired a remarkable array of skills, which encompass the following:</p><ul><li>Proficient problem-solving capabilities</li><li>Exceptional critical thinking prowess</li><li>Extensive cross-disciplinary knowledge</li><li>Proficiency in self-directed learning</li><li>Passionate pursuit of exploring cutting-edge trends within my industry</li></ul><p>These competencies serve as a testament to my dedication and commitment to continuously enhance my expertise, thereby enabling me to thrive in diverse professional contexts.</p>",
-                "img": "./resources/soft_skills.png"
-            },
-            {
-                "title": "Django project",
-                "header": "Chormeister",
-                "text": "My latest achievement on the backend-developer path is <a href='http://chormeisters.com/'>Chormeisters.com</a>, a website designed to assist musical collectives in organizing their activities. You can now register on the platform, or contact me directly, and I will give you access to the test piece of it.<br><br>Chormeister was entirely developed by me using Django framework and SQLite as the underlying technologies. Here's <a href='https://github.com/ChaPerx64/Chormeister_Django'>the GitHub repo</a>.",
-                "img": "./resources/Photo8.png"
-            },
-            {
-                "title": "Other projects",
-                "header": "Small projects",
-                "text": "I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS.<br><br>",
-                "img": "./resources/small_projects.png"
-            },
-            {
-                "title": "Additional info",
-                "header": "I also am:",
-                "text": "<ul><li>A C1-ish-level English speaker</li><li>Can conduct in 30-person-sized non-professional choir and write music for it</li><li>always glad to hear other people's stories and maybe have some of my own</li><li>a rigorous non-drinker and a frivolous meat-eater</li><li>easily integrate into teams I am introduced to</li></ul>",
-                "img": "./resources/Photo5.jpg"
-            },
-            {
-                "title": "Bio",
-                "header": "Engineer",
-                "text": "Though I was born in Saint-Petersburg. I was raised on the far small town in the Siberian North.<br><br>Graduated from Peter The Great Polytechnical University with Bachelor's degree in Robotics. Sought an opportunity to build up my engineering skills by joining my faculty's Robotics Lab.<br><br>Consequent employments lead me through positions of:<ul><li>mechanical design developer</li><li>small team leader (4 pers.)</li><li>project launch support (+4000 parts)</li><li>and various maintenance and service roles</li></ul>",
-                "img": "./resources/Photo2-1.jpg"
-            },
-            {
-                "title": "Shift in career",
-                "header": "From Mechanical Enginer to IT",
-                "text": "Overtime it became more apparent to me that I am able to grow beyond what I already knew.<br><br>Also, the unforeseen circumstances of today are moving me to look for new opportunities and to change my understanding of self and and my role in productive processes.<br><br>I believe that I can widen a teams' qualifications thanks to my ability to look beyond divisions of technical fields.",
-                "img": "./resources/Photo3.jpg"
-            },
-            {
-                "title": "Contact information",
-                "header": "Call Me Maybe ;)",
-                "text": "Thank you very much for your time and consideration!<br><br>If you want to take another look on my professional path in other medium, here's:<ul><li><a href='./resources/CV Junior Backend Developer Chaian Par-ool Skill.pdf' target='_blank'>Printable format</a></li><li><a href='https://www.linkedin.com/in/chaian-par-ool/' target='_blank'>My LinkedIn profile</a></li></ul>Contact me in messenger apps:<ul><li><a href='https://t.me/ChePar' target='_blank'>Telegram</a> (preferrable)</li><li><a href='https://wa.me/qr/2RSGXOEKL6NBG1' target='_blank'>WhatsApp</a></li><li>Viber: +381-62-932-70-32</li></ul>Or by e-mail: <a href='mailto:chayan.par@gmail.com'>chayan.par@gmail.com</a>",
-                "img": "./resources/Photo6.jpg"
-            }
-        ]
+  "sections": [
+    {
+      "title": "Introduction",
+      "header": "Hello! I am Chaian Par-ool",
+      "text": [
+        {
+          "innertext": "A highly motivated Backend Engineer with a strong foundation in Robotics Engineering and a passion for developing software solutions.",
+          "blocktype": "paragraph"
+        },
+        {
+          "innertext": "Possessing a solid foundation in engineering principles, analytical thinking, and problem-solving, I am eager to leverage my technical skills and adaptability to contribute to the development and optimization of software applications. With my drive for continuous learning, I am determined to excel in the realm of back-end engineering.",
+          "blocktype": "paragraph"
+        }
+      ],
+      "img": "./resources/Photo1.jpg"
+    },
+    {
+      "title": "My Stack",
+      "header": "Mastered Technologies",
+      "text": [
+        {
+          "blocktype": "paragraph",
+          "innertext": "Below is a list of some tools that I can confidently use:"
+        },
+        {
+          "blocktype": "header",
+          "innertext": "Backend tools:"
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Python3, Git, Django, Django REST framework, PySimpleGUI, Python-Telegram-Bot library, PostgreSQL, SQLite"
+        },
+        {
+          "blocktype": "header",
+          "innertext": "Frontend tools:"
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "HTML, CSS, SASS, JavaScript"
+        },
+        {
+          "blocktype": "header",
+          "innertext": "DevOps skills:"
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Bash scripting, GitHub Actions, light server maintenance (can also setup a web-server using NGINX and gunicorn)"
+        },
+
+        {
+          "blocktype": "header",
+          "innertext": "Other:"
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Some time ago used to program PLCs using C, FBD and Ladder Diagram"
+        }
+      ],
+      "img": "./resources/Photo2_2.jpg"
+    },
+    {
+      "title": "Soft Skills",
+      "header": "Soft Skills",
+      "text": [
+        {
+          "blocktype": "paragraph",
+          "innertext": "Throughout my illustrious professional trajectory, I have acquired a remarkable array of skills, which encompass the following:"
+        },
+        {
+          "blocktype": "list",
+          "innertext": "Proficient problem-solving capabilities\nExceptional critical thinking prowess\nExtensive cross-disciplinary knowledge\nProficiency in self-directed learning\nPassionate pursuit of exploring cutting-edge trends within my industry"
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "These competencies serve as a testament to my dedication and commitment to continuously enhance my expertise, thereby enabling me to thrive in diverse professional contexts."
+        }
+      ],
+      "img": "./resources/soft_skills.png"
+    },
+    {
+      "title": "Django project",
+      "header": "Chormeister",
+      "text": [
+        {
+          "blocktype": "paragraph",
+          "innertext": "My latest achievement on the backend-developer path is <a href='http://chormeisters.com/'>Chormeisters.com</a>, a website designed to assist musical collectives in organizing their activities. You can now register on the platform, or contact me directly, and I will give you access to the test piece of it."
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Chormeister was entirely developed by me using Django framework and SQLite as the underlying technologies. Here's <a href='https://github.com/ChaPerx64/Chormeister_Django'>the GitHub repo</a>."
+        }
+      ],
+      "img": "./resources/Photo8.png"
+    },
+    {
+      "title": "Other projects",
+      "header": "Small projects",
+      "text": [
+        {
+          "blocktype": "paragraph",
+          "innertext": "I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS."
+        }
+      ],
+      "img": "./resources/small_projects.png"
+    },
+    {
+      "title": "Additional info",
+      "header": "I also am:",
+      "text": [
+        {
+          "blocktype": "list",
+          "innertext": "A C1-ish-level English speaker\nCan conduct in 30-person-sized non-professional choir and write music for it\nAlways glad to hear other people's stories and maybe have some of my own\nA rigorous non-drinker and a frivolous meat-eater\neasily integrate into teams I am introduced to"
+        }
+      ],
+      "img": "./resources/Photo5.jpg"
+    },
+    {
+      "title": "Bio",
+      "header": "Engineer",
+      "text": [
+        {
+          "blocktype": "paragraph",
+          "innertext": "Though I was born in Saint-Petersburg. I was raised on the far small town in the Siberian North."
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Graduated from Peter The Great Polytechnical University with Bachelor's degree in Robotics. Sought an opportunity to build up my engineering skills by joining my faculty's Robotics Lab."
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Consequent employments lead me through positions of:"
+        },
+        {
+          "blocktype": "list",
+          "innertext": "mechanical design developer\nsmall team leader (4 pers.)\nproject launch support (+4000 parts)\nand various maintenance and service roles"
+        }
+      ],
+      "img": "./resources/Photo2-1.jpg"
+    },
+    {
+      "title": "Shift in career",
+      "header": "From Mechanical Enginer to IT",
+      "text": [
+        {
+          "blocktype": "paragraph",
+          "innertext": "Overtime it became more apparent to me that I am able to grow beyond what I already knew."
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Also, the unforeseen circumstances of today are moving me to look for new opportunities and to change my understanding of self and and my role in productive processes."
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "I believe that I can widen a teams' qualifications thanks to my ability to look beyond divisions of technical fields."
+        }
+      ],
+      "img": "./resources/Photo3.jpg"
+    },
+    {
+      "title": "Contact information",
+      "header": "Call Me Maybe ;)",
+      "text": [
+        {
+          "blocktype": "paragraph",
+          "innertext": "Thank you very much for your time and consideration!"
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "If you want to take another look on my professional path in other medium, here's:"
+        },
+        {
+          "blocktype": "list",
+          "innertext": "<a href='./resources/CV Junior Backend Developer Chaian Par-ool Skill.pdf' target='_blank'>Printable format</a>\n<a href='https://www.linkedin.com/in/chaian-par-ool/' target='_blank'>My LinkedIn profile</a>"
+        },
+        {
+          "blocktype": "paragraph",
+          "innertext": "Contact me in messenger apps:"
+        },
+        {
+          "blocktype": "list",
+          "innertext": "<a href='https://t.me/ChePar' target='_blank'>Telegram</a> (preferrable)\n<a href='https://wa.me/qr/2RSGXOEKL6NBG1' target='_blank'>WhatsApp</a>\nViber: +381-62-932-70-32"
+        },
+        {
+          "blocktype": "list",
+          "innertext": "Or by e-mail: <a href='mailto:chayan.par@gmail.com'>chayan.par@gmail.com</a>"
+        }
+      ],
+      "img": "./resources/Photo6.jpg"
+    }
+  ]
 }
