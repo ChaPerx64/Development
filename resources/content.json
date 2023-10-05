@@ -84,11 +84,11 @@
       "text": [
         {
           "blocktype": "paragraph",
-          "innertext": "My latest achievement on the backend-developer path is <a href='http://chormeisters.com/'>Chormeisters.com</a>, a website designed to assist musical collectives in organizing their activities. You can now register on the platform, or contact me directly, and I will give you access to the test piece of it."
+          "innertext": "My latest achievement on the backend-developer path is <a href='http://chormeisters.com/' target='_blank'>Chormeisters.com</a>, a website designed to assist musical collectives in organizing their activities. You can now register on the platform, or contact me directly, and I will give you access to the test piece of it."
         },
         {
           "blocktype": "paragraph",
-          "innertext": "Chormeister was entirely developed by me using Django framework and SQLite as the underlying technologies. Here's <a href='https://github.com/ChaPerx64/Chormeister_Django'>the GitHub repo</a>."
+          "innertext": "Chormeister was entirely developed by me using Django framework and SQLite as the underlying technologies. Here's <a href='https://github.com/ChaPerx64/Chormeister_Django' target='_blank'>the GitHub repo</a>."
         }
       ],
       "img": "./resources/Photo8.png"
@@ -99,7 +99,7 @@
       "text": [
         {
           "blocktype": "paragraph",
-          "innertext": "I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS."
+          "innertext": "I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64' target='_blank'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS."
         }
       ],
       "img": "./resources/small_projects.png"

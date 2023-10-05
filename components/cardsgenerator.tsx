@@ -15,7 +15,7 @@ import LinkParser from "./linkparser";
 function stringToLi(text, key) {
   return (
     <li key={key}>
-      <LinkParser dom={[text]}></LinkParser>
+      <LinkParser arr={[text]} keyprop={0}></LinkParser>
     </li>
   );
 }
@@ -24,14 +24,14 @@ function getBlock({ innertext, blocktype }, key) {
   if (blocktype == "paragraph") {
     return (
       <p key={key} className="mt-2 break-words">
-        <LinkParser dom={[innertext]}></LinkParser>
+        <LinkParser arr={[innertext]} keyprop={0}></LinkParser>
       </p>
     );
   }
   if (blocktype == "header") {
     return (
       <p key={key} className="mt-2 break-words text-lg">
-        <LinkParser dom={[innertext]}></LinkParser>
+        <LinkParser arr={[innertext]} keyprop={0}></LinkParser>
       </p>
     );
   }

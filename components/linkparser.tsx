@@ -2,61 +2,77 @@
 import React from "react";
 import { Link } from "@nextui-org/react";
 
-function insertLink(htmltext: string) {
-  const opentag = htmltext.indexOf("<a href='");
-  if (opentag == -1) {
-    return <>{...[...dom.slice(1), htmltext]}</>;
-  }
-  const urlstart = opentag + "<a href=".length;
-  const text1 = React.createElement(
-    "text",
-    { key: keyprop },
-    htmltext.slice(0, opentag)
+function parseAsProps(str) {
+  return JSON.parse(
+    `{ ${str
+      .replaceAll("'", '"')
+      .replaceAll(/ \w*=/g, (s) => ` "${s.slice(1, -1)}": `)} }`.replaceAll(
+      '" "',
+      '", "'
+    )
   );
-  keyprop += 1;
-  const urlend = htmltext.indexOf("' >");
-  const href = htmltext.slice(urlstart, urlend);
-  const closetag = htmltext.indexOf("</a>");
-  const innertext = htmltext.slice(urlend + 1, closetag);
-  const link = (
-    <Link key={keyprop} href={href}>
+}
+
+function getFisrtObject(
+  htmltext,
+  keyprop,
+  { openingtag, closingtag, nextui_class } // custom classes not implemented
+) {
+  htmltext = htmltext.slice(openingtag.length);
+  const openingtag_end_ind = htmltext.indexOf(">");
+  const props = parseAsProps(htmltext.slice(0, openingtag_end_ind));
+  htmltext = htmltext.slice(openingtag_end_ind + 1);
+  const closingtag_index = htmltext.indexOf(closingtag);
+  const innertext = htmltext.slice(0, closingtag_index);
+  return (
+    <Link key={keyprop} {...props}>
       {innertext}
     </Link>
   );
-  return [text1, link, htmltext.slice(closetag + 4)];
 }
 
-export default function LinkParser({ dom, keyprop }) {
-  if (dom.length == 0) {
-    dom = [];
+function parseTagObject({ arr, keyprop }) {
+  const tag = {
+    openingtag: "<a",
+    closingtag: "</a>",
+    nextui_class: Link, // not implemented
+  };
+  let [htmltext, ...dom] = arr;
+  if (htmltext.indexOf(tag.openingtag) == 0) {
+    dom = [...dom, getFisrtObject(htmltext, keyprop, tag)];
+    htmltext = htmltext.slice(
+      htmltext.indexOf(tag.closingtag) + tag.closingtag.length
+    );
+    return { arr: [htmltext, ...dom], keyprop: keyprop + 1 };
+  } else {
+    return { arr, keyprop };
   }
-  const htmltext = dom[0];
-  if (!keyprop) {
-    keyprop = 0;
+}
+
+function parseTextObject({ arr, keyprop }) {
+  let [htmltext, ...dom] = arr;
+  if (htmltext == "") return { arr, keyprop };
+  const tag_ind = htmltext.indexOf("<");
+  if (tag_ind == -1) {
+    return { arr: ["", ...dom, htmltext], keyprop: keyprop + 1 };
+  } else {
+    dom = [
+      ...dom,
+      React.createElement("text", { key: keyprop }, htmltext.slice(0, tag_ind)),
+    ];
+    htmltext = htmltext.slice(tag_ind);
+    return { arr: [htmltext, ...dom], keyprop: keyprop + 1 };
   }
-  //   console.log(dom, htmltext);
-  const opentag = htmltext.indexOf("<a href=");
-  if (opentag == -1) {
-    return <>{...[...dom.slice(1), htmltext]}</>;
-  }
-  const urlstart = opentag + "<a href='".length;
-  dom = [
-    ...dom,
-    React.createElement("text", { key: keyprop }, htmltext.slice(0, opentag)),
-  ];
-  keyprop += 1;
-  const urlend = htmltext.indexOf("'", urlstart);
-  const href = htmltext.slice(urlstart, urlend);
-  const closetag = htmltext.indexOf("</a>");
-  const innertext = htmltext.slice(htmltext.indexOf(">", urlend) + 1, closetag);
-  dom = [
-    ...dom,
-    <Link key={keyprop} href={href}>
-      {innertext}
-    </Link>,
-  ];
-  return LinkParser({
-    dom: [htmltext.slice(closetag + 4), dom.slice(1)],
-    keyprop: keyprop + 1,
-  });
+}
+
+export default function LinkParser({
+  arr,
+  keyprop,
+}: {
+  arr: Array<any | string>;
+  keyprop: number;
+}) {
+  return arr[0] == ""
+    ? arr.slice(1)
+    : LinkParser(parseTextObject(parseTagObject({ arr, keyprop })));
 }
