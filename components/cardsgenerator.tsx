@@ -55,9 +55,9 @@ export default function CardsGenerator({ sections }) {
           <div
             ref={ref}
             key={i}
-            className="flex-grow flex-shrink-0 flex-basis-5/6 w-2/3"
+            className="flex-grow flex-shrink-0 flex-basis-5/6 w-5/6"
           >
-            <Card key={i} id={`card_${i}`} className={"w-1/2 ml-auto mr-0"}>
+            <Card key={i} id={`card_${i}`} className={"w-2/5 ml-auto mr-0"}>
               <CardHeader className="text-xl">
                 <p>{header}</p>
               </CardHeader>

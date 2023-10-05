@@ -30,11 +30,11 @@ export default function RootLayout({
       <body className="h-screen">
         <Providers>
           <MyNavbar isBordered height="6vh" data={data} />
-          <main className="static h-[93.9vh] w-full">
+          <main className="static h-[93vh] w-full">
             <div className="h-full w-1/2 flex items-center justify-center sticky">
               <BgSlider />
             </div>
-            <div className="absolute top-0 left-0 h-full w-full overflow-y-auto flex flex-row items-center justify-start gap-x-[100vw]">
+            <div className="absolute top-[7vh] left-0 h-[93vh] w-full overflow-y-auto flex flex-row items-center justify-start gap-x-[100vw]">
               <div></div>
               <CardsGenerator sections={data.sections} />
               <div></div>
