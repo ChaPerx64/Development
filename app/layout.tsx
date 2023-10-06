@@ -34,10 +34,8 @@ export default function RootLayout({
             <div className="h-full w-1/2 flex items-center justify-center sticky">
               <BgSlider />
             </div>
-            <div className="absolute top-[7vh] left-0 h-[93vh] w-full overflow-y-auto flex flex-row items-center justify-start gap-x-[100vw]">
-              <div></div>
+            <div className="absolute top-[7vh] left-0 h-[93vh] w-full overflow-y-auto flex flex-row items-center justify-start">
               <CardsGenerator sections={data.sections} />
-              <div></div>
             </div>
           </main>
         </Providers>
