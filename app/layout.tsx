@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import MyNavbar from "./navbar";
 import Main from "./main";
 import { Providers } from "./providers";
@@ -25,17 +25,27 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [currSlide, setSlide] = useState(0);
   return (
     <html lang="en" className={htmlClassName}>
       <body className="h-screen">
         <Providers>
-          <MyNavbar isBordered height="6vh" data={data} />
+          <MyNavbar isBordered height="6vh" data={data} setslide={setSlide} />
           <main className="static h-[93vh] w-full">
             <div className="h-full w-1/2 flex items-center justify-center sticky">
-              <BgSlider />
+              <BgSlider
+                images={data.sections.map(({ img }) => img)}
+                currSlide={currSlide}
+              />
             </div>
-            <div className="absolute top-[7vh] left-0 h-[93vh] w-full overflow-y-auto flex flex-row items-center justify-start">
-              <CardsGenerator sections={data.sections} />
+            <div className="absolute top-[7vh] left-0 h-[93vh] w-full overflow-hidden flex flex-row items-center justify-start">
+              <CardsGenerator
+                sections={data.sections.map(({ header, text }) => ({
+                  header,
+                  text,
+                }))}
+                state={[currSlide, setSlide]}
+              />
             </div>
           </main>
         </Providers>

@@ -8,7 +8,7 @@ import {
   Button,
   Spacer,
 } from "@nextui-org/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import MainCardFooter from "./cardfooter";
 import LinkParser from "./linkparser";
 
@@ -46,18 +46,29 @@ function getBlock({ innertext, blocktype }, key) {
   }
 }
 
-export default function CardsGenerator({ sections }) {
+export default function CardsGenerator({
+  sections,
+  state: [currSlide, setSlide],
+}) {
   return (
     <>
       {sections.map(({ header, text }, i, arr) => {
         const ref = useRef(null);
+        useEffect(() => {
+          if (ref.current.id == `card_${currSlide}`)
+            ref.current.scrollIntoView({
+              behavior: "smooth",
+              inline: "center",
+            });
+        });
         return (
           <div
             ref={ref}
             key={i}
+            id={`card_${i}`}
             className="flex-grow flex-shrink-0 flex-basis-5/6 w-5/6 mx-[50vw]"
           >
-            <Card key={i} id={`card_${i}`} className={"w-2/5 ml-auto mr-0"}>
+            <Card key={i} className={"w-2/5 ml-auto mr-0"}>
               <CardHeader className="text-xl">
                 <p>{header}</p>
               </CardHeader>
@@ -67,7 +78,7 @@ export default function CardsGenerator({ sections }) {
               </CardBody>
               <Divider />
               <MainCardFooter
-                // func={scrollToCard}
+                state={[currSlide, setSlide]}
                 refer={ref}
                 key={i}
                 index={i}

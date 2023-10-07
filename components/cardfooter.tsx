@@ -1,19 +1,15 @@
 import { Button, CardFooter } from "@nextui-org/react";
 
-function scrollToNext(ref) {
-  const targetcard = ref.current.nextElementSibling;
-  targetcard?.scrollIntoView({ behavior: "smooth", inline: "center" });
-}
-
-function scrollToPrevious(ref) {
-  const targetcard = ref.current.previousElementSibling;
-  targetcard?.scrollIntoView({ behavior: "smooth", inline: "center" });
-}
-
-export default function MainCardFooter({ index, length, refer, ...props }) {
+export default function MainCardFooter({
+  index,
+  length,
+  refer,
+  state: [currSlide, setSlide],
+  ...props
+}) {
   return index == 0 ? (
     <CardFooter {...props}>
-      <Button color="primary" onClick={() => scrollToNext(refer)}>
+      <Button color="primary" onClick={() => setSlide(currSlide + 1)}>
         Next
       </Button>
     </CardFooter>
@@ -22,7 +18,7 @@ export default function MainCardFooter({ index, length, refer, ...props }) {
       <Button
         color="primary"
         variant="ghost"
-        onClick={() => scrollToPrevious(refer)}
+        onClick={() => setSlide(currSlide - 1)}
       >
         Previous
       </Button>
@@ -32,11 +28,11 @@ export default function MainCardFooter({ index, length, refer, ...props }) {
       <Button
         color="primary"
         variant="ghost"
-        onClick={() => scrollToPrevious(refer)}
+        onClick={() => setSlide(currSlide - 1)}
       >
         Previous
       </Button>
-      <Button color="primary" onClick={() => scrollToNext(refer)}>
+      <Button color="primary" onClick={() => setSlide(currSlide + 1)}>
         Next
       </Button>
     </CardFooter>

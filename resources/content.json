@@ -13,7 +13,7 @@
           "blocktype": "paragraph"
         }
       ],
-      "img": "./resources/Photo1.jpg"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/Photo1.jpg"
     },
     {
       "title": "My Stack",
@@ -57,7 +57,7 @@
           "innertext": "Some time ago used to program PLCs using C, FBD and Ladder Diagram"
         }
       ],
-      "img": "./resources/Photo2_2.jpg"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/Photo2_2.jpg"
     },
     {
       "title": "Soft Skills",
@@ -76,7 +76,7 @@
           "innertext": "These competencies serve as a testament to my dedication and commitment to continuously enhance my expertise, thereby enabling me to thrive in diverse professional contexts."
         }
       ],
-      "img": "./resources/soft_skills.png"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/soft_skills.png"
     },
     {
       "title": "Django project",
@@ -91,7 +91,7 @@
           "innertext": "Chormeister was entirely developed by me using Django framework and SQLite as the underlying technologies. Here's <a href='https://github.com/ChaPerx64/Chormeister_Django' target='_blank'>the GitHub repo</a>."
         }
       ],
-      "img": "./resources/Photo8.png"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/Photo8.png"
     },
     {
       "title": "Other projects",
@@ -102,7 +102,7 @@
           "innertext": "I had built a couple of utilities for myself (like MyPomodoros and ChormeisterBot) and for job-related stuff (like forming all the specifications needed push huge projects in production). Source code for them is available in my <a href='https://github.com/ChaPerx64' target='_blank'>GitHub profile</a>. Telegram bots are live and hosted on my private VPS."
         }
       ],
-      "img": "./resources/small_projects.png"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/small_projects.png"
     },
     {
       "title": "Additional info",
@@ -113,7 +113,7 @@
           "innertext": "A C1-ish-level English speaker\nCan conduct in 30-person-sized non-professional choir and write music for it\nAlways glad to hear other people's stories and maybe have some of my own\nA rigorous non-drinker and a frivolous meat-eater\neasily integrate into teams I am introduced to"
         }
       ],
-      "img": "./resources/Photo5.jpg"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/Photo5.jpg"
     },
     {
       "title": "Bio",
@@ -136,7 +136,7 @@
           "innertext": "mechanical design developer\nsmall team leader (4 pers.)\nproject launch support (+4000 parts)\nand various maintenance and service roles"
         }
       ],
-      "img": "./resources/Photo2-1.jpg"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/Photo2-1.jpg"
     },
     {
       "title": "Shift in career",
@@ -155,7 +155,7 @@
           "innertext": "I believe that I can widen a teams' qualifications thanks to my ability to look beyond divisions of technical fields."
         }
       ],
-      "img": "./resources/Photo3.jpg"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/Photo3.jpg"
     },
     {
       "title": "Contact information",
@@ -171,7 +171,7 @@
         },
         {
           "blocktype": "list",
-          "innertext": "<a href='./resources/CV Junior Backend Developer Chaian Par-ool Skill.pdf' target='_blank'>Printable format</a>\n<a href='https://www.linkedin.com/in/chaian-par-ool/' target='_blank'>My LinkedIn profile</a>"
+          "innertext": "<a href='https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/CV Junior Backend Developer Chaian Par-ool Skill.pdf' target='_blank'>Printable format</a>\n<a href='https://www.linkedin.com/in/chaian-par-ool/' target='_blank'>My LinkedIn profile</a>"
         },
         {
           "blocktype": "paragraph",
@@ -186,7 +186,7 @@
           "innertext": "Or by e-mail: <a href='mailto:chayan.par@gmail.com'>chayan.par@gmail.com</a>"
         }
       ],
-      "img": "./resources/Photo6.jpg"
+      "img": "https://raw.githubusercontent.com/ChaPerx64/Development/main/resources/Photo6.jpg"
     }
   ]
 }
