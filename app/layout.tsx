@@ -15,10 +15,6 @@ import CardsGenerator from "../components/cardsgenerator";
 import data from "../resources/content.json" assert { type: "json" };
 // text-foreground bg-background
 let htmlClassName = `light ${jost.className}`;
-const navbarheight = 6;
-const mainheight = 100 - navbarheight;
-const cardheight = 50;
-const cardspacing = mainheight - cardheight;
 
 export default function RootLayout({
   children,

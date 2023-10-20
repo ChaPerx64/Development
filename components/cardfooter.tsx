@@ -15,6 +15,9 @@ export default function MainCardFooter({
     </CardFooter>
   ) : index == length - 1 ? (
     <CardFooter {...props}>
+      <Button color="secondary" variant="ghost" onClick={() => setSlide(0)}>
+        To the beginning
+      </Button>
       <Button
         color="primary"
         variant="ghost"

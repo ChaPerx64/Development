@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
 import next from "next";
@@ -7,30 +8,35 @@ import { useEffect, useRef } from "react";
 export default function BgSlider({ images, currSlide }) {
   // console.log(images[currSlide]);
   // const sections = data.sections
+  const [displayedSlide, setDisplayedSlide] = useState(currSlide);
   const ref = useRef(null);
+  useEffect(() => {});
+  // const displayedSlide = useRef(currSlide);
   const output = (
-    <div className="w-3/4">
+    <div
+      id="bgimagediv"
+      className="w-3/4 transition-opacity animate-floating opacity-0"
+      ref={ref}
+    >
       <Image
         isBlurred
         as={NextImage}
         priority={true}
-        src={images[currSlide]}
-        className="transition-all duration-1000"
+        src={images[displayedSlide]}
         alt="blah-blah"
         width={4000}
         height={4000}
-        ref={ref}
       />
     </div>
   );
   useEffect(() => {
-    // ref.current.hidden = "false";
-    // console.log(ref.current);
-    // console.log(ref.current.style);
-    ref.current.className = ref.current.className.replace("hidden", "");
+    setTimeout(() => {
+      ref.current.className = ref.current.className.replace(" opacity-0", "");
+      setDisplayedSlide(currSlide);
+    }, 400);
     return () => {
       console.log(ref);
-      // ref.current.className += " hidden";
+      ref.current.className = ref.current.className.concat(" opacity-0");
     };
   });
   return output;
