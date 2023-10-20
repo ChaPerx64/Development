@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import MyNavbar from "./navbar";
 import Main from "./main";
 import { Providers } from "./providers";
-import { Divider, Spacer } from "@nextui-org/react";
+import { Pagination } from "@nextui-org/react";
 import { Jost } from "next/font/google";
 import BgSlider from "../components/backgroundslider";
 
@@ -13,7 +13,6 @@ const jost = Jost({ subsets: ["latin", "cyrillic"] });
 import "../styles/global.css";
 import CardsGenerator from "../components/cardsgenerator";
 import data from "../resources/content.json" assert { type: "json" };
-// text-foreground bg-background
 let htmlClassName = `light ${jost.className}`;
 
 export default function RootLayout({
@@ -28,7 +27,7 @@ export default function RootLayout({
         <Providers>
           <MyNavbar isBordered height="6vh" data={data} setslide={setSlide} />
           <main className="static h-[93vh] w-full">
-            <div className="h-full w-1/2 flex items-center justify-center sticky">
+            <div className="h-full w-1/2 flex items-center justify-center">
               <BgSlider
                 images={data.sections.map(({ img }) => img)}
                 currSlide={currSlide}
@@ -41,6 +40,15 @@ export default function RootLayout({
                   text,
                 }))}
                 state={[currSlide, setSlide]}
+              />
+            </div>
+            <div className="absolute bottom-5 left-0 w-full flex items-center justify-center">
+              <Pagination
+                total={data.sections.length}
+                page={currSlide + 1}
+                onChange={(n) => {
+                  setSlide(n - 1);
+                }}
               />
             </div>
           </main>

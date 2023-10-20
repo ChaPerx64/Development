@@ -83,7 +83,6 @@ export default function CardsGenerator({
                 key={i}
                 index={i}
                 length={arr.length}
-                className="flex flex-row justify-end space-x-unit-xs"
               />
             </Card>
           </div>

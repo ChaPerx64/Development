@@ -8,13 +8,19 @@ export default function MainCardFooter({
   ...props
 }) {
   return index == 0 ? (
-    <CardFooter {...props}>
+    <CardFooter
+      {...props}
+      className="flex flex-row justify-end space-x-unit-xs"
+    >
       <Button color="primary" onClick={() => setSlide(currSlide + 1)}>
         Next
       </Button>
     </CardFooter>
   ) : index == length - 1 ? (
-    <CardFooter {...props}>
+    <CardFooter
+      {...props}
+      className="flex flex-row justify-between space-x-unit-xs"
+    >
       <Button color="secondary" variant="ghost" onClick={() => setSlide(0)}>
         To the beginning
       </Button>
@@ -27,7 +33,10 @@ export default function MainCardFooter({
       </Button>
     </CardFooter>
   ) : (
-    <CardFooter {...props}>
+    <CardFooter
+      {...props}
+      className="flex flex-row justify-end space-x-unit-xs"
+    >
       <Button
         color="primary"
         variant="ghost"
