@@ -6,12 +6,8 @@ import pic1 from "../resources/Photo1.jpg";
 import { useEffect, useRef } from "react";
 
 export default function BgSlider({ images, currSlide }) {
-  // console.log(images[currSlide]);
-  // const sections = data.sections
   const [displayedSlide, setDisplayedSlide] = useState(currSlide);
   const ref = useRef(null);
-  useEffect(() => {});
-  // const displayedSlide = useRef(currSlide);
   const output = (
     <div
       id="bgimagediv"
@@ -35,7 +31,6 @@ export default function BgSlider({ images, currSlide }) {
       setDisplayedSlide(currSlide);
     }, 400);
     return () => {
-      console.log(ref);
       ref.current.className = ref.current.className.concat(" opacity-0");
     };
   });
