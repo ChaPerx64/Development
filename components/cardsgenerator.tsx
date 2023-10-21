@@ -8,7 +8,6 @@ import {
   Button,
   Spacer,
 } from "@nextui-org/react";
-import { useEffect, useRef } from "react";
 import MainCardFooter from "./cardfooter";
 import LinkParser from "./linkparser";
 
