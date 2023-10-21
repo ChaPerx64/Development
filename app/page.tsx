@@ -4,7 +4,7 @@ import MyNavbar from "./navbar";
 import { Pagination } from "@nextui-org/react";
 import BgSlider from "../components/backgroundslider";
 
-import "../styles/global.css";
+// import "../styles/global.css";
 import CardsGenerator from "../components/cardsgenerator";
 import data from "../resources/content.json" assert { type: "json" };
 import switchelementanimation from "../components/switchelementanimation";
