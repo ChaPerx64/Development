@@ -11,10 +11,9 @@ export default function switchelementanimation({
   setState: React.ComponentState;
   newState: number;
   cssclass: string;
-  delay: number;
+  delay?: number;
 }) {
   useEffect(() => {
-    // const timeout = delay ? delay : 400;
     setTimeout(() => {
       ref.current.className = ref.current.className.replace(` ${cssclass}`, "");
       setState(newState);
