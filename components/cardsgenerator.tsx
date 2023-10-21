@@ -1,13 +1,5 @@
 "use client";
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Divider,
-  Button,
-  Spacer,
-} from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
 import MainCardFooter from "./cardfooter";
 import LinkParser from "./linkparser";
 

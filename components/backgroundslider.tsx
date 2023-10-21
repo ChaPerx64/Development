@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
-import next from "next";
-import pic1 from "../resources/Photo1.jpg";
 import { useEffect, useRef } from "react";
 import switchelementanimation from "./switchelementanimation";
 

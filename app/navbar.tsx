@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-// import { Divider } from "@nextui-org/react";
-import { Navbar, NavbarBrand, NavbarItem, Button } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarItem } from "@nextui-org/react";
 import ContactMeButton from "../components/contactme";
-// import "../styles/global.css";
 
 export default function MyNavbar({ setslide, ...props }) {
   return (

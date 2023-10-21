@@ -11,19 +11,19 @@ import {
   Link,
 } from "@nextui-org/react";
 
-export default function ContactMeButton(props) {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+export default function ContactMeButton({ ...props }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Button onPress={onOpen} {...props}>
+      <Button onClick={onOpen} {...props}>
         Contact me
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal size="xs" backdrop="blur" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader className="flex flex-col gap-3">
                 Other media
               </ModalHeader>
               <ModalBody>
