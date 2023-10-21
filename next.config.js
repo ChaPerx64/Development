@@ -11,5 +11,5 @@ module.exports = {
     ],
   },
   output: "export",
-  distDir: "docs",
+  // distDir: "docs",
 };
