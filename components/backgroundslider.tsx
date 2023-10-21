@@ -4,14 +4,22 @@ import NextImage from "next/image";
 import next from "next";
 import pic1 from "../resources/Photo1.jpg";
 import { useEffect, useRef } from "react";
+import switchelementanimation from "./switchelementanimation";
 
 export default function BgSlider({ images, currSlide }) {
   const [displayedSlide, setDisplayedSlide] = useState(currSlide);
+  const changingclass = "opacity-0";
   const ref = useRef(null);
-  const output = (
+  switchelementanimation({
+    ref: ref,
+    setState: setDisplayedSlide,
+    newState: currSlide,
+    cssclass: changingclass,
+  });
+  return (
     <div
       id="bgimagediv"
-      className="w-3/4 transition-opacity animate-floating opacity-0"
+      className={`mt-5 md:mt-0 w-3/4 transition-opacity animate-floating ${changingclass}`}
       ref={ref}
     >
       <Image
@@ -25,14 +33,4 @@ export default function BgSlider({ images, currSlide }) {
       />
     </div>
   );
-  useEffect(() => {
-    setTimeout(() => {
-      ref.current.className = ref.current.className.replace(" opacity-0", "");
-      setDisplayedSlide(currSlide);
-    }, 400);
-    return () => {
-      ref.current.className = ref.current.className.concat(" opacity-0");
-    };
-  });
-  return output;
 }

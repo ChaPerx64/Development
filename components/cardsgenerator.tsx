@@ -49,56 +49,23 @@ function getBlock({ innertext, blocktype }, key) {
 export default function CardsGenerator({
   sections,
   state: [currSlide, setSlide],
+  ...props
 }) {
   return (
-    <>
-      {sections.map(({ header, text }, i, arr) => {
-        const ref = useRef(null);
-        useEffect(() => {
-          if (ref.current.id == `card_${currSlide}`)
-            ref.current.scrollIntoView({
-              behavior: "smooth",
-              inline: "center",
-            });
-        });
-        return (
-          <div
-            ref={ref}
-            key={i}
-            id={`card_${i}`}
-            className="flex-grow flex-shrink-0 flex-basis-5/6 w-5/6 mx-[50vw]"
-          >
-            <Card key={i} className={"w-2/5 ml-auto mr-0"}>
-              <CardHeader className="text-xl">
-                <p>{header}</p>
-              </CardHeader>
-              <Divider />
-              <CardBody className="flex flex-col items-start justify-center break-words">
-                {text.map(getBlock)}
-              </CardBody>
-              <Divider />
-              <MainCardFooter
-                state={[currSlide, setSlide]}
-                refer={ref}
-                key={i}
-                index={i}
-                length={arr.length}
-              />
-            </Card>
-          </div>
-        );
-      })}
-    </>
+    <Card {...props}>
+      <CardHeader className="text-xl">
+        <p>{sections[currSlide].header}</p>
+      </CardHeader>
+      <Divider />
+      <CardBody className="flex flex-col items-start justify-center break-words">
+        {sections[currSlide].text.map(getBlock)}
+      </CardBody>
+      <Divider />
+      <MainCardFooter
+        state={[currSlide, setSlide]}
+        index={currSlide}
+        length={sections.length}
+      />
+    </Card>
   );
 }
-
-// const scrollToLastFruit = () => {
-//   const lastChildElement = ref.current?.lastElementChild;
-//   lastChildElement?.scrollIntoView({ behavior: "smooth" });
-// };
-
-// function scrollToCard(id) {
-//   const targetcard = ref.current?.
-//   targetcard?.scrollIntoView({ behavior: "smooth", inline: "center" });
-//   }, []);
-// }

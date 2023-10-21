@@ -3,7 +3,6 @@ import { Button, CardFooter } from "@nextui-org/react";
 export default function MainCardFooter({
   index,
   length,
-  refer,
   state: [currSlide, setSlide],
   ...props
 }) {
