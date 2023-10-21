@@ -19,7 +19,13 @@ export default function ContactMeButton({ ...props }) {
       <Button onClick={onOpen} {...props}>
         Contact me
       </Button>
-      <Modal size="xs" backdrop="blur" isOpen={isOpen} onClose={onClose}>
+      <Modal
+        size="xs"
+        backdrop="blur"
+        placement="center"
+        isOpen={isOpen}
+        onClose={onClose}
+      >
         <ModalContent>
           {(onClose) => (
             <>

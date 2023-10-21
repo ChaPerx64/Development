@@ -4,7 +4,6 @@ import MyNavbar from "./navbar";
 import { Pagination } from "@nextui-org/react";
 import BgSlider from "../components/backgroundslider";
 
-// import "../styles/global.css";
 import CardsGenerator from "../components/cardsgenerator";
 import data from "../resources/content.json" assert { type: "json" };
 import switchelementanimation from "../components/switchelementanimation";
@@ -22,8 +21,8 @@ export default function Page() {
   });
   return (
     <>
-      <MyNavbar isBordered height="6vh" data={data} setslide={setSlide} />
-      <main className={"static h-auto md:h-[93vh] w-full"}>
+      <MyNavbar isBordered data={data} setslide={setSlide} />
+      <main className={"static h-auto md:h-[90vh] w-full"}>
         <div
           className={
             "md:absolute mt-5 bottom-5 left-0 \
